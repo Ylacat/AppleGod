@@ -1,7 +1,6 @@
 package com.tacaly.applegod;
 
 import org.bukkit.Material;
-import org.bukkit.entity.Minecart;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.ShapedRecipe;
 
@@ -73,8 +72,8 @@ public class recipes {
         //crafting shape
         AppleEnchanted.shape("*%*","%B%","*%*");
         //crafting grid
-        AppleEnchanted.setIngredient('*', Material.NETHERITE_INGOT);
-        AppleEnchanted.setIngredient('%', Material.STONE_PRESSURE_PLATE);
+        AppleEnchanted.setIngredient('*', Material.ENCHANTED_BOOK);
+        AppleEnchanted.setIngredient('%', Material.ENDER_PEARL);
         AppleEnchanted.setIngredient('B', Material.GOLDEN_APPLE);
 
         // Add recipe to server of golden apple
@@ -90,9 +89,9 @@ public class recipes {
         //crafting shape
         TotemOfundying.shape("*%*","%B%","*%*");
         //crafting grid
-        TotemOfundying.setIngredient('*', Material.BAMBOO);
-        TotemOfundying.setIngredient('%', Material.GOLD_INGOT);
-        TotemOfundying.setIngredient('B', Material.HEART_OF_THE_SEA);
+        TotemOfundying.setIngredient('*', Material.AMETHYST_SHARD);
+        TotemOfundying.setIngredient('%', Material.NETHERITE_INGOT);
+        TotemOfundying.setIngredient('B', Material.NETHER_STAR);
 
         // Add recipe to server
         getServer().addRecipe(TotemOfundying);

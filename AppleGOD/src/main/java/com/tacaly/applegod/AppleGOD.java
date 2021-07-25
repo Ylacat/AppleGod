@@ -1,7 +1,11 @@
 package com.tacaly.applegod;
 
+import com.google.common.util.concurrent.ExecutionError;
+import com.sun.jdi.event.ExceptionEvent;
 import io.sentry.Sentry;
+import net.md_5.bungee.chat.SelectorComponentSerializer;
 import org.bukkit.plugin.java.JavaPlugin;
+import java.io.EOFException;
 
 public final class AppleGOD extends JavaPlugin {
 
@@ -10,18 +14,20 @@ public final class AppleGOD extends JavaPlugin {
         // Plugin startup logic
         Sentry.init(options -> {
             options.setDsn("https://6003ad3d131a420da26873fdfba15d1a@o61262.ingest.sentry.io/5505032");
+
+        //        //saving to log
+
+         try {
+            // the plugin works
+             getLogger().info("Has been enabled!");
+            } catch (Exception e) {
+                 Sentry.captureException(e);
+            }
         });
-        //saving to log
-        try {
-            getLogger().info("Has been enabled!");
-           // throw new Exception("Plugin enabled.");
-        } catch (Exception e) {
-            Sentry.captureException(e);
-        }
+
         new UpdateChecker(this, 68729).getVersion(version -> {
                     if (this.getDescription().getVersion().equalsIgnoreCase(version)) {
                         getLogger().info("There is not a new update available.");
-                    } else {
                         getLogger().info("There is a new update available.");
                     }
                 });
