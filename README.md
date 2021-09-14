@@ -19,7 +19,7 @@ Just a mod to make apples. Instead of going to a mine/farming.
 It combines the fun of crafting and not getting the apple for free. The apples are craftable from within the servers recipes, therefore you can see how an apple is crafted. Now no more worries about finding apples.
 
 I will update the plugin when needed. Feel free to join the Discord server.
-https://discord.gg/3zKZnmN
+https://discord.gg/cKpENSUZtc
 
 ### Crafting an apple
 ![image of crafting an apple](img/craft.png)
